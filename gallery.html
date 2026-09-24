@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>GALLERY｜SANTOIRE MAMIE サントワマミー｜長崎・思案橋</title>
+  <meta name="description" content="長崎・思案橋のスナック「サントワマミー」の店内・外観の写真。">
+  <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">SANTOIRE MAMIE</a>
+      <nav class="gnav" aria-label="メインメニュー">
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="gallery.html" aria-current="page">GALLERY</a></li>
+          <li><a href="access.html">ACCESS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開く"><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <nav aria-label="スマートフォンメニュー">
+      <ul>
+        <li><a href="index.html"><span class="drawer__en">TOP</span><span class="drawer__ja">トップ</span></a></li>
+        <li><a href="about.html"><span class="drawer__en">ABOUT</span><span class="drawer__ja">お店について</span></a></li>
+        <li><a href="menu.html"><span class="drawer__en">MENU</span><span class="drawer__ja">料金</span></a></li>
+        <li><a href="gallery.html" aria-current="page"><span class="drawer__en">GALLERY</span><span class="drawer__ja">ギャラリー</span></a></li>
+        <li><a href="access.html"><span class="drawer__en">ACCESS</span><span class="drawer__ja">アクセス</span></a></li>
+        <li><a href="contact.html"><span class="drawer__en">CONTACT</span><span class="drawer__ja">お問い合わせ</span></a></li>
+      </ul>
+    </nav>
+    <p class="drawer__foot">NAGASAKI · SHIANBASHI</p>
+  </div>
+
+  <main>
+    <section class="page-head">
+      <h1><span class="page-head__en">GALLERY</span><span class="gold-line"></span><span class="page-head__ja">ギャラリー</span></h1>
+    </section>
+
+    <!-- 写真の一覧は js/config.js の GALLERY で管理しています -->
+    <ul class="gallery" data-gallery></ul>
+
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="写真の拡大表示" aria-hidden="true">
+      <button class="lightbox__close" type="button" aria-label="閉じる">CLOSE <i aria-hidden="true"></i></button>
+      <button class="lightbox__nav lightbox__prev" type="button" aria-label="前の写真">
+        <svg viewBox="0 0 22 44" aria-hidden="true"><path d="M20 2 2 22l18 20" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" src="" alt="">
+        <figcaption class="lightbox__cap">
+          <span class="lightbox__count"></span><span class="lightbox__cat"></span><span class="lightbox__ja"></span>
+        </figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__next" type="button" aria-label="次の写真">
+        <svg viewBox="0 0 22 44" aria-hidden="true"><path d="m2 2 18 20L2 42" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p class="site-footer__brand">SANTOIRE MAMIE</p>
+    <p class="site-footer__ja">サントワマミー</p>
+    <span class="gold-line"></span>
+    <p class="site-footer__addr">〒<span data-site="zip">850-0901</span> <span data-site="address">長崎県長崎市本石灰町4-13</span></p>
+    <nav class="site-footer__nav" aria-label="フッターメニュー">
+      <a href="index.html">TOP</a><a href="about.html">ABOUT</a><a href="menu.html">MENU</a><a href="gallery.html">GALLERY</a><a href="access.html">ACCESS</a><a href="contact.html">CONTACT</a>
+    </nav>
+    <p class="site-footer__copy">&copy; <span data-year>2026</span> SANTOIRE MAMIE</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
