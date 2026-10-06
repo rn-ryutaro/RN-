@@ -1,5 +1,5 @@
 /* =========================================================
-   SANTOIRE MAMIE ／ 共通スクリプト（全ページ）
+   SANS TOI MAMIE ／ 共通スクリプト（全ページ）
    - ヘッダー / スマホメニュー
    - config.js の店舗情報・料金・ギャラリーを各ページへ反映
    ========================================================= */
@@ -7,6 +7,22 @@
   'use strict';
 
   var SITE = window.SITE || {};
+
+  /* ---------- ページ移動時は必ずページの先頭から表示 ---------- */
+  // ブラウザやプレビュー画面が前のスクロール位置を引き継がないようにする
+  // （#about などページ内の位置を指定したリンクの場合はその位置を優先）
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  function toTop() {
+    if (location.hash && location.hash.length > 1) return;
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (document.body && document.body.scrollIntoView) {
+      try { document.body.scrollIntoView({ block: 'start', behavior: 'instant' }); } catch (e) {}
+    }
+  }
+  toTop();
+  window.addEventListener('DOMContentLoaded', toTop);
+  window.addEventListener('load', toTop);
+  window.addEventListener('pageshow', function (e) { if (e.persisted) toTop(); });
   var root = document.documentElement;
 
   function has(key) {
@@ -19,7 +35,7 @@
   }
   function mapEmbedUrl() {
     return 'https://maps.google.com/maps?q=' +
-      encodeURIComponent(SITE.address || '') + '&z=17&output=embed';
+      encodeURIComponent(SITE.address || '') + '&t=k&z=18&hl=ja&output=embed'; // t=k … 航空写真
   }
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -71,27 +87,44 @@
       var txt = tel.querySelector('[data-contact-tel-text]');
       if (txt) txt.textContent = num;
     }
-    var line = document.querySelector('[data-contact-line]');
-    if (!line) return;
-    var url = has('line') ? String(SITE.line).trim() : '';
-    if (/^https?:\/\//.test(url)) {           // URLが設定されている場合のみ有効化
-      line.href = url;
-      line.target = '_blank';
-      line.rel = 'noopener';
-      line.removeAttribute('aria-disabled');
-      line.removeAttribute('role');
-      line.classList.remove('is-disabled');
-      var note = document.querySelector('[data-contact-line-note]');
+    // LINE / Instagram：URLが設定されている場合のみボタンを有効化
+    document.querySelectorAll('[data-contact-sns]').forEach(function (btn) {
+      var key = btn.getAttribute('data-contact-sns');
+      var url = has(key) ? String(SITE[key]).trim() : '';
+      if (!/^https?:\/\//.test(url)) return;
+      btn.href = url;
+      btn.target = '_blank';
+      btn.rel = 'noopener';
+      btn.removeAttribute('aria-disabled');
+      btn.removeAttribute('role');
+      btn.classList.remove('is-disabled');
+      var note = document.querySelector('[data-contact-sns-note="' + key + '"]');
       if (note) note.remove();
-    }
+    });
   }
 
   /* ---------- MENU の描画 ---------- */
+  // 金額（例 "3,000円"）は数字と「円」を分けて、数字を大きく表示する
+  function priceEl(price) {
+    var span = el('span', 'menu-item__price');
+    var text = String(price || '');
+    var m = text.match(/^([\d,]+)(円)$/);
+    if (m) {
+      span.classList.add('is-num');
+      span.appendChild(el('span', 'menu-item__num', m[1]));
+      span.appendChild(el('span', 'menu-item__unit', m[2]));
+    } else {
+      if (!/\d/.test(text) || /曲ごと/.test(text)) span.classList.add('is-text');
+      span.textContent = text;
+    }
+    return span;
+  }
+
   function renderMenu() {
     var box = document.querySelector('[data-menu]');
     if (!box) return;
     (window.MENU || []).forEach(function (cat) {
-      var sec = el('section', 'menu-cat');
+      var sec = el('section', 'menu-cat' + (cat.featured ? ' menu-cat--featured' : ''));
       var head = el('div', 'menu-cat__head');
       head.appendChild(el('h2', 'menu-cat__en', cat.en));
       head.appendChild(el('span', 'menu-cat__ja', cat.ja));
@@ -101,6 +134,18 @@
       var items = cat.items || [];
       if (!items.length) {
         sec.appendChild(el('p', 'menu-empty', '準備中'));
+      } else if (cat.featured) {
+        // 目立たせる項目（飲み放題など）
+        items.forEach(function (it) {
+          var f = el('div', 'menu-feature');
+          f.appendChild(el('p', 'menu-feature__name', it.name));
+          var row = el('p', 'menu-feature__row');
+          row.appendChild(priceEl(it.price));
+          if (it.tag) row.appendChild(el('span', 'menu-feature__tag', it.tag));
+          f.appendChild(row);
+          if (it.note) f.appendChild(el('p', 'menu-feature__note', it.note));
+          sec.appendChild(f);
+        });
       } else {
         var ul = el('ul', 'menu-list');
         items.forEach(function (it) {
@@ -109,7 +154,7 @@
           if (it.note) name.appendChild(el('span', 'menu-item__note', it.note));
           li.appendChild(name);
           li.appendChild(el('span', 'menu-item__dots'));
-          li.appendChild(el('span', 'menu-item__price', it.price || ''));
+          li.appendChild(priceEl(it.price));
           ul.appendChild(li);
         });
         sec.appendChild(ul);
@@ -138,6 +183,7 @@
       var fig = el('div', 'media');
       var img = el('img');
       img.src = g.file;
+      if (g.pos) img.style.objectPosition = g.pos;
       img.alt = g.caption || g.category || '';
       img.loading = i < 2 ? 'eager' : 'lazy';
       img.decoding = 'async';

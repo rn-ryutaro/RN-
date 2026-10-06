@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>SANTOIRE MAMIE｜サントワマミー｜長崎・思案橋のスナック</title>
-  <meta name="description" content="長崎・思案橋のスナック「サントワマミー（SANTOIRE MAMIE）」。思案橋の夜に、心ほどけるひとときを。">
-  <meta property="og:title" content="SANTOIRE MAMIE｜サントワマミー">
+  <title>SANS TOI MAMIE｜サントワマミー｜長崎・思案橋のスナック</title>
+  <meta name="description" content="長崎・思案橋のスナック「サントワマミー（SANS TOI MAMIE）」。思案橋の夜に、心ほどけるひとときを。">
+  <meta property="og:title" content="SANS TOI MAMIE｜サントワマミー">
   <meta property="og:description" content="長崎・思案橋のスナック。思案橋の夜に、心ほどけるひとときを。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero.jpg">
@@ -21,15 +21,14 @@
 </head>
 <body>
 
+
   <!-- ===== HEADER ===== -->
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="index.html">SANTOIRE MAMIE</a>
+      <a class="brand" href="index.html">SANS TOI MAMIE</a>
       <nav class="gnav" aria-label="メインメニュー">
         <ul>
           <li><a href="index.html" aria-current="page">TOP</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="menu.html">MENU</a></li>
           <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="access.html">ACCESS</a></li>
           <li><a href="contact.html">CONTACT</a></li>
@@ -42,8 +41,6 @@
     <nav aria-label="スマートフォンメニュー">
       <ul>
         <li><a href="index.html" aria-current="page"><span class="drawer__en">TOP</span><span class="drawer__ja">トップ</span></a></li>
-        <li><a href="about.html"><span class="drawer__en">ABOUT</span><span class="drawer__ja">お店について</span></a></li>
-        <li><a href="menu.html"><span class="drawer__en">MENU</span><span class="drawer__ja">料金</span></a></li>
         <li><a href="gallery.html"><span class="drawer__en">GALLERY</span><span class="drawer__ja">ギャラリー</span></a></li>
         <li><a href="access.html"><span class="drawer__en">ACCESS</span><span class="drawer__ja">アクセス</span></a></li>
         <li><a href="contact.html"><span class="drawer__en">CONTACT</span><span class="drawer__ja">お問い合わせ</span></a></li>
@@ -54,7 +51,7 @@
 
   <main>
     <!-- ===== HERO ===== -->
-    <section class="hero" aria-label="SANTOIRE MAMIE">
+    <section class="hero" aria-label="SANS TOI MAMIE">
       <div class="hero__media">
         <!-- 写真は images/hero.jpg を差し替えるだけで変更できます -->
         <img class="hero__img" src="images/hero.jpg" alt="" fetchpriority="high" decoding="async">
@@ -63,7 +60,7 @@
 
       <div class="hero__content">
         <h1 class="hero__logo">
-          <span class="hero__logo-en" data-seq style="--d:.5s">SANTOIRE MAMIE</span>
+          <span class="hero__logo-en" data-seq style="--d:.5s">SANS TOI MAMIE</span>
           <span class="hero__line" data-seq style="--d:1.15s" aria-hidden="true"></span>
           <span class="hero__logo-ja" data-seq style="--d:1.45s">サントワマミー</span>
         </h1>
@@ -89,19 +86,19 @@
           グラスを傾けて、肩の力をほどいて、<br>
           今日という一日を、静かに終えていく。
         </p>
-        <p class="intro__sign" data-reveal style="--rd:.3s">SANTOIRE MAMIE</p>
+        <p class="intro__sign" data-reveal style="--rd:.3s">SANS TOI MAMIE</p>
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="t-about">
+    <!-- ===== ABOUT（お店について） ===== -->
+    <section class="t-about" id="about">
       <div class="t-about__grid">
-        <a class="photo t-about__main" href="about.html" data-reveal="photo">
-          <div class="media"><img src="images/about.jpg" alt="サントワマミーの店内" loading="lazy" decoding="async"></div>
+        <a class="photo t-about__main" href="gallery.html" data-reveal="photo">
+          <div class="media"><img src="images/top-about-main.jpg" alt="サントワマミーのカウンターとボトル棚" loading="lazy" decoding="async"></div>
           <span class="photo__label">VIEW</span>
         </a>
         <a class="photo t-about__sub" href="gallery.html" data-reveal="photo" style="--rd:.2s">
-          <div class="media"><img src="images/gallery03.jpg" alt="カウンター" loading="lazy" decoding="async"></div>
+          <div class="media"><img src="images/top-about-sub.jpg" alt="サントワマミーの店内" loading="lazy" decoding="async"></div>
           <span class="photo__label">VIEW</span>
         </a>
         <div class="t-about__body">
@@ -115,13 +112,24 @@
             長崎・思案橋。にぎやかな夜の街の中に、<br class="pc-only">ふっと肩の力が抜ける場所があります。<br>
             落ち着いた灯りの下で、ゆっくりとお過ごしください。
           </p>
-          <p data-reveal style="--rd:.5s"><a class="text-link" href="about.html">VIEW MORE <span class="btn__arrow"></span></a></p>
+        </div>
+      </div>
+      <div class="t-about__points">
+        <div class="t-about__point" data-reveal>
+          <p class="t-about__point-en">SPACE</p>
+          <h3 class="t-about__point-title">夜に溶けこむ、落ち着いた空間。</h3>
+          <p class="t-about__point-text">やわらかな照明と、深い色の店内。<br>大人の夜に似合う、静かな時間をご用意しています。</p>
+        </div>
+        <div class="t-about__point" data-reveal style="--rd:.15s">
+          <p class="t-about__point-en">COUNTER</p>
+          <h3 class="t-about__point-title">グラスを片手に、心ほどけるひととき。</h3>
+          <p class="t-about__point-text">一日の終わりに、ほんの少し立ち寄るように。<br>思案橋の夜を、ゆっくりとお楽しみください。</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== MENU ===== -->
-    <section class="t-menu">
+    <!-- ===== MENU（料金） ===== -->
+    <section class="t-menu" id="menu">
       <div class="t-menu__bg media" data-reveal="fade">
         <img src="images/gallery07.jpg" alt="" loading="lazy" decoding="async">
       </div>
@@ -131,96 +139,83 @@
           <span class="gold-line" data-reveal="line" style="--rd:.15s"></span>
           <p class="sec-title__ja" data-reveal style="--rd:.2s">料金</p>
         </div>
-        <p class="t-menu__text" data-reveal style="--rd:.3s">セット・ドリンクなどの料金のご案内です。</p>
-        <p data-reveal style="--rd:.4s"><a class="btn" href="menu.html">VIEW MENU <span class="btn__arrow"></span></a></p>
-      </div>
-    </section>
-
-    <!-- ===== GALLERY ===== -->
-    <section class="t-gallery">
-      <div class="t-gallery__head">
-        <div class="sec-title">
-          <h2 class="sec-title__en" data-reveal>GALLERY</h2>
-          <span class="gold-line" data-reveal="line" style="--rd:.15s"></span>
-          <p class="sec-title__ja" data-reveal style="--rd:.2s">ギャラリー</p>
+        <!-- 料金の内容は js/config.js の MENU で変更できます -->
+        <p class="t-menu__lead" data-reveal style="--rd:.25s">サントワマミーの料金とシステムのご案内です。</p>
+        <div class="t-menu__board" data-reveal style="--rd:.3s">
+          <div class="menu-board" data-menu></div>
+          <ul class="menu-notes" data-menu-notes></ul>
         </div>
       </div>
-      <div class="t-gallery__grid">
-        <a class="photo g-a" href="gallery.html" data-reveal="photo">
-          <div class="media"><img src="images/gallery02.jpg" alt="店内" loading="lazy" decoding="async"></div>
-          <span class="photo__label">VIEW</span>
-          <span class="photo__cap">Interior</span>
-        </a>
-        <a class="photo g-b" href="gallery.html" data-reveal="photo" style="--rd:.15s">
-          <div class="media"><img src="images/gallery04.jpg" alt="ボトル" loading="lazy" decoding="async"></div>
-          <span class="photo__label">VIEW</span>
-          <span class="photo__cap">Bottle</span>
-        </a>
-        <a class="photo g-c" href="gallery.html" data-reveal="photo">
-          <div class="media"><img src="images/gallery05.jpg" alt="店内" loading="lazy" decoding="async"></div>
-          <span class="photo__label">VIEW</span>
-          <span class="photo__cap">Interior</span>
-        </a>
-        <a class="photo g-d" href="gallery.html" data-reveal="photo" style="--rd:.15s">
-          <div class="media"><img src="images/gallery06.jpg" alt="グラス" loading="lazy" decoding="async"></div>
-          <span class="photo__label">VIEW</span>
-          <span class="photo__cap">Counter</span>
-        </a>
-      </div>
-      <p class="t-gallery__more" data-reveal><a class="btn" href="gallery.html">VIEW GALLERY <span class="btn__arrow"></span></a></p>
     </section>
 
-    <!-- ===== ACCESS ===== -->
-    <section class="t-access">
-      <div class="t-access__grid">
-        <a class="photo t-access__photo" href="access.html" data-reveal="photo">
-          <div class="media"><img src="images/gallery01.jpg" alt="外観" loading="lazy" decoding="async"></div>
-          <span class="photo__label">OPEN</span>
-        </a>
-        <div class="t-access__body">
-          <div class="sec-title">
-            <h2 class="sec-title__en" data-reveal>ACCESS</h2>
-            <span class="gold-line" data-reveal="line" style="--rd:.15s"></span>
-            <p class="sec-title__ja" data-reveal style="--rd:.2s">アクセス</p>
+    <!-- ===== EVENT & NEWS（Instagramへの案内） ===== -->
+    <section class="t-event" id="event">
+      <div class="t-event__panel" data-reveal>
+        <div class="t-event__bg" aria-hidden="true"></div>
+        <div class="t-event__inner">
+          <div class="sec-title sec-title--center">
+            <h2 class="sec-title__en">EVENT &amp; NEWS</h2>
+            <span class="gold-line"></span>
+            <p class="sec-title__ja">イベント・最新情報</p>
           </div>
-          <div class="t-access__info" data-reveal style="--rd:.3s">
-            <p class="t-access__name"><span data-site="name">サントワマミー</span></p>
-            <p>〒<span data-site="zip">850-0901</span><br><span data-site="address">長崎県長崎市本石灰町4-13</span></p>
-            <p class="t-access__area" data-site="area">長崎・思案橋</p>
-          </div>
-          <p class="t-access__btns" data-reveal style="--rd:.4s">
-            <a class="btn" href="#" data-site-href="map" target="_blank" rel="noopener">GOOGLE MAPS <span class="btn__arrow"></span></a>
-            <a class="text-link" href="access.html">VIEW ACCESS</a>
+          <p class="t-event__text">
+            ボウリング大会などのイベント情報や、<br>お店のお知らせ・最新情報はInstagramで発信しています。<br>詳しい内容はInstagramをチェックしてください。
           </p>
+          <!-- InstagramのURLは js/config.js の instagram で設定します（空欄の間はアイコンが押せない表示になります） -->
+          <a class="t-event__ig is-disabled" role="link" aria-disabled="true" aria-label="サントワマミーのInstagram（新しいタブで開きます）" data-contact-sns="instagram">
+            <span class="t-event__ig-circle"><svg class="t-event__ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="17.3" cy="6.7" r="1.05" fill="currentColor"/></svg></span>
+            <span class="t-event__ig-label">Instagram</span>
+            <span class="t-event__ig-sub">最新情報はこちら</span>
+          </a>
+          <p class="t-event__note" data-contact-sns-note="instagram">Instagramのご案内は、ただいま準備中です。</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
-    <section class="t-contact">
+    <!-- ===== INFORMATION（各ページへの入口） ===== -->
+    <section class="t-info">
       <div class="sec-title sec-title--center">
-        <h2 class="sec-title__en" data-reveal>CONTACT</h2>
+        <h2 class="sec-title__en" data-reveal>INFORMATION</h2>
         <span class="gold-line" data-reveal="line" style="--rd:.15s"></span>
-        <p class="sec-title__ja" data-reveal style="--rd:.2s">お問い合わせ</p>
+        <p class="sec-title__ja" data-reveal style="--rd:.2s">ご案内</p>
       </div>
-      <p class="t-contact__text" data-reveal style="--rd:.3s">思案橋の夜に、お待ちしております。</p>
-      <p class="t-contact__tel" data-site-if="tel" data-reveal style="--rd:.35s">
-        <a href="#" data-site-href="tel"><span class="t-contact__tel-label">TEL</span><span data-site="tel"></span></a>
-      </p>
-      <p data-reveal style="--rd:.4s"><a class="btn" href="contact.html">CONTACT <span class="btn__arrow"></span></a></p>
+      <p class="t-info__text" data-reveal style="--rd:.25s">店内の写真・アクセス・お問い合わせは、各ページでご案内しています。</p>
+      <ul class="t-info__list">
+        <li data-reveal>
+          <a class="t-info__btn" href="gallery.html">
+            <span class="t-info__en">GALLERY</span>
+            <span class="t-info__ja">ギャラリー｜店内の写真</span>
+            <span class="btn__arrow" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li data-reveal style="--rd:.12s">
+          <a class="t-info__btn" href="access.html">
+            <span class="t-info__en">ACCESS</span>
+            <span class="t-info__ja">アクセス｜住所・地図</span>
+            <span class="btn__arrow" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li data-reveal style="--rd:.24s">
+          <a class="t-info__btn" href="contact.html">
+            <span class="t-info__en">CONTACT</span>
+            <span class="t-info__ja">お問い合わせ｜電話・LINE・Instagram</span>
+            <span class="btn__arrow" aria-hidden="true"></span>
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
-    <p class="site-footer__brand">SANTOIRE MAMIE</p>
+    <p class="site-footer__brand">SANS TOI MAMIE</p>
     <p class="site-footer__ja">サントワマミー</p>
     <span class="gold-line"></span>
     <p class="site-footer__addr">〒<span data-site="zip">850-0901</span> <span data-site="address">長崎県長崎市本石灰町4-13</span></p>
     <nav class="site-footer__nav" aria-label="フッターメニュー">
-      <a href="index.html">TOP</a><a href="about.html">ABOUT</a><a href="menu.html">MENU</a><a href="gallery.html">GALLERY</a><a href="access.html">ACCESS</a><a href="contact.html">CONTACT</a>
+      <a href="index.html">TOP</a><a href="gallery.html">GALLERY</a><a href="access.html">ACCESS</a><a href="contact.html">CONTACT</a>
     </nav>
-    <p class="site-footer__copy">&copy; <span data-year>2026</span> SANTOIRE MAMIE</p>
+    <p class="site-footer__copy">&copy; <span data-year>2026</span> SANS TOI MAMIE</p>
   </footer>
 
   <script src="js/config.js"></script>
