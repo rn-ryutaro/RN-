@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>ACCESS｜SANTOIRE MAMIE サントワマミー｜長崎・思案橋</title>
+  <title>ACCESS｜SANS TOI MAMIE サントワマミー｜長崎・思案橋</title>
   <meta name="description" content="長崎・思案橋のスナック「サントワマミー」へのアクセス。長崎県長崎市本石灰町4-13。">
   <meta name="theme-color" content="#0a0908">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -18,12 +18,10 @@
   <!-- ===== HEADER ===== -->
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="index.html">SANTOIRE MAMIE</a>
+      <a class="brand" href="index.html">SANS TOI MAMIE</a>
       <nav class="gnav" aria-label="メインメニュー">
         <ul>
           <li><a href="index.html">TOP</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="menu.html">MENU</a></li>
           <li><a href="gallery.html">GALLERY</a></li>
           <li><a href="access.html" aria-current="page">ACCESS</a></li>
           <li><a href="contact.html">CONTACT</a></li>
@@ -36,8 +34,6 @@
     <nav aria-label="スマートフォンメニュー">
       <ul>
         <li><a href="index.html"><span class="drawer__en">TOP</span><span class="drawer__ja">トップ</span></a></li>
-        <li><a href="about.html"><span class="drawer__en">ABOUT</span><span class="drawer__ja">お店について</span></a></li>
-        <li><a href="menu.html"><span class="drawer__en">MENU</span><span class="drawer__ja">料金</span></a></li>
         <li><a href="gallery.html"><span class="drawer__en">GALLERY</span><span class="drawer__ja">ギャラリー</span></a></li>
         <li><a href="access.html" aria-current="page"><span class="drawer__en">ACCESS</span><span class="drawer__ja">アクセス</span></a></li>
         <li><a href="contact.html"><span class="drawer__en">CONTACT</span><span class="drawer__ja">お問い合わせ</span></a></li>
@@ -54,7 +50,7 @@
     <div class="access">
       <div class="access__info">
         <p class="access__name" data-site="name">サントワマミー</p>
-        <p class="access__name-en" data-site="nameEn">SANTOIRE MAMIE</p>
+        <p class="access__name-en" data-site="nameEn">SANS TOI MAMIE</p>
         <!-- 営業時間・定休日・TEL は js/config.js に入力すると表示されます -->
         <dl class="info-list">
           <div class="info-list__row"><dt>ADDRESS</dt><dd>〒<span data-site="zip">850-0901</span><br><span data-site="address">長崎県長崎市本石灰町4-13</span></dd></div>
@@ -66,9 +62,13 @@
         <p class="access__btn"><a class="btn" href="#" data-site-href="map" target="_blank" rel="noopener">GOOGLE MAPS <span class="btn__arrow"></span></a></p>
       </div>
       <div class="access__visual">
-        <div class="media"><img src="images/gallery01.jpg" alt="外観" decoding="async"></div>
+        <p class="access__map-cap"><span class="access__map-cap-en">MAP</span><span class="access__map-cap-ja">航空写真</span></p>
+        <!-- Googleマップ（航空写真）。タップ・クリックでGoogleマップが開きます -->
         <div class="access__map">
-          <iframe data-site-embed="map" title="サントワマミーの地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://maps.google.com/maps?q=%E9%95%B7%E5%B4%8E%E7%9C%8C%E9%95%B7%E5%B4%8E%E5%B8%82%E6%9C%AC%E7%9F%B3%E7%81%B0%E7%94%BA4-13&amp;t=k&amp;z=18&amp;hl=ja&amp;output=embed" data-site-embed="map" title="サントワマミーの場所（Googleマップ航空写真）" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="access__map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%95%B7%E5%B4%8E%E7%9C%8C%E9%95%B7%E5%B4%8E%E5%B8%82%E6%9C%AC%E7%9F%B3%E7%81%B0%E7%94%BA4-13" data-site-href="map" target="_blank" rel="noopener" aria-label="Googleマップで店舗の場所を開く（新しいタブ）">
+            <span class="access__map-link-label">Googleマップで開く</span>
+          </a>
         </div>
       </div>
     </div>
@@ -77,14 +77,14 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
-    <p class="site-footer__brand">SANTOIRE MAMIE</p>
+    <p class="site-footer__brand">SANS TOI MAMIE</p>
     <p class="site-footer__ja">サントワマミー</p>
     <span class="gold-line"></span>
     <p class="site-footer__addr">〒<span data-site="zip">850-0901</span> <span data-site="address">長崎県長崎市本石灰町4-13</span></p>
     <nav class="site-footer__nav" aria-label="フッターメニュー">
-      <a href="index.html">TOP</a><a href="about.html">ABOUT</a><a href="menu.html">MENU</a><a href="gallery.html">GALLERY</a><a href="access.html">ACCESS</a><a href="contact.html">CONTACT</a>
+      <a href="index.html">TOP</a><a href="gallery.html">GALLERY</a><a href="access.html">ACCESS</a><a href="contact.html">CONTACT</a>
     </nav>
-    <p class="site-footer__copy">&copy; <span data-year>2026</span> SANTOIRE MAMIE</p>
+    <p class="site-footer__copy">&copy; <span data-year>2026</span> SANS TOI MAMIE</p>
   </footer>
 
   <script src="js/config.js"></script>
